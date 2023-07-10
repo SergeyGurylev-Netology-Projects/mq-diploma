@@ -24,29 +24,19 @@ body, html {
     font-family: 'Open Sans', sans-serif;
 }
 
-.top-menu__link,
-.trends-card-menu__link,
-.trends-card-title-menu__link,
-.content-card-menu__link,
-.content-card-title-menu__link,
-.last-post-card-title-menu__link,
-.side-tag > a,
-.side-topic__title,
-.shop-card__context > a {
+a[href] {
     text-decoration: none;
 }
 
-.top-menu__link:hover,
-.trends-card-menu__link:hover,
-.content-card-menu__link:hover,
-.shop-card__context > a:hover {
+ul {
+    list-style: none;
+}
+
+.href-underline:hover {
     text-decoration: underline;
 }
 
-.trends-card-title-menu__link:hover,
-.content-card-title-menu__link:hover,
-.last-post-card-title-menu__link:hover,
-.side-topic__title:hover {
+.href-color:hover {
     color: #b59f5b;
 }
 
@@ -97,7 +87,6 @@ header {
 }
 
 .menu__list {
-    list-style: none;
     display: flex;
     padding: 0;
 }
@@ -366,7 +355,7 @@ input {
     cursor: pointer;
 }
 
-.subscribe-btn:before {
+.subscribe-btn::before {
     content: 'ПОДПИСАТЬСЯ';
     font-size: 14px;
     font-weight: bold;
@@ -466,12 +455,12 @@ input {
 .shop-card__context {
     padding: 0 25px;
 }
-.shop-card__context > span, .shop-card__context > a {
+.shop-card__context > span, .shop-card__link {
     font-size: 15px;
     line-height: 22px;
 }
 
-.shop-card__context > a {
+.shop-card__link {
     color: #b59f5b;
 }
 
@@ -480,10 +469,6 @@ input {
     height: 48px;
     margin: 22px 25px 0;
     justify-content: space-between;
-}
-
-.shop-card__price-value {
-    display: block;
 }
 
 .shop-card__price-value-price2 {
@@ -510,12 +495,14 @@ input {
     left: 1px;
 }
 
-.shop-card__price-btn {
+.shop-card-form {
+    display: block;
     width: 140px;
+    margin: 0;
 }
 
 .shop-card-btn {
-    width: 140px;
+    width: 100%;
     height: 48px;
     border: none;
     background-color: #b59f5b;
@@ -540,7 +527,6 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    list-style: none;
     height: 100%;
     width: 210px;
     padding: 0;

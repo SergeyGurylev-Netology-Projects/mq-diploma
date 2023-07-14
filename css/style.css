@@ -61,28 +61,25 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/banner-bg.jpg');
     height: 450px;
     width: 100%;
+    max-width: 1660px;
+    margin: 0 auto;
 }
 
-#noemi-logo {
+.noemi-logo {
     width: 179px;
     height: 41px;
-    background: url("../svg/noemi-logo.svg");
-    background-size: cover;
 }
 
 .top-panel {
     display: flex;
-    position: relative;
     justify-content: space-between;
-    padding-left: 245px;
-    padding-right: 245px;
-    padding-top: 28px;
+    align-items: center;
+    margin-top: 28px;
 }
 
 .top-menu__link {
     color: white;
     font-size: 13px;
-    padding-left: 35px;
     text-transform: uppercase;
 }
 
@@ -91,13 +88,18 @@ header {
     padding: 0;
 }
 
+.top-menu > .menu__list > li:nth-child(n+2) {
+    padding-left: 35px;
+}
+
 .top-label {
     color: white;
     font-weight: bold;
     font-size: 45px;
     line-height: 75px;
     text-transform: uppercase;
-    padding-top: 127px;
+    /*padding-top: 127px;*/
+    margin-top: 127px;
     text-align: center;
 }
 
@@ -123,35 +125,39 @@ header {
 
 .trends-card {
     display: flex;
+    flex-direction: column;
     position: relative;
     width: calc(25% - 2px);
+    /*height: calc((25% - 2px) * 0.77);*/
+    /*height: 319px;*/
+    min-height: 319px;
     background-color: black;
 }
 
+.trends-card__background {
+    position: relative;
+}
+
 .trends-card__image {
-    left: 0;
-    right: 0;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.6;
     width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.4;
+    height: 319px;
 }
 
 .trends-card__body{
+    position: relative;
     border: #b59f5b 2px solid;
     text-align: left;
-    position: absolute;
-    box-sizing: border-box;
-    right: 15px;
-    left: 15px;
-    bottom: 15px;
+    margin: auto 15px 15px;
+    z-index: 2;
 }
 
 .trends-card-menu > ul {
     padding: 38px 0 0 32px;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .trends-card-menu__link {
@@ -162,8 +168,7 @@ header {
     text-transform: uppercase;
 }
 
-.trends-card-title-menu__link
-{
+.trends-card-title-menu__link {
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -175,17 +180,30 @@ header {
     padding: 15px 32px 35px;
 }
 
+.container {
+    /*text-align: center;*/
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+}
+
 .content {
-    margin-left: 245px;
+    margin-right: 50px;
+}
+
+.content-container {
     margin-top: 63px;
-    margin-right: calc(270px + 230px + 50px);
+}
+
+.footer-container {
+    flex-direction: column;
 }
 
 .content-card {
     display: flex;
 }
 
-.content-card:nth-child(n+1) {
+.content-card:nth-child(n+2) {
     margin-top: 59px;
 }
 
@@ -199,11 +217,11 @@ header {
 .content-card__image > img {
     width: 100%;
     height: 100%;
-    background-size: cover;
 }
 
 .content-card-menu > ul {
     margin: 0;
+    flex-wrap: wrap;
 }
 
 .content-card-menu__link {
@@ -214,8 +232,7 @@ header {
     text-transform: uppercase;
 }
 
-.content-card-title-menu__link
-{
+.content-card-title-menu__link {
     color: #0f0d0e;
     font-size: 20px;
     font-weight: bold;
@@ -250,10 +267,11 @@ header {
 }
 
 .side-panel {
-    float: right;
+    /*float: right;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
     width: 270px;
-    padding: 0;
-    margin-right: 245px;
+    /*padding: 0;*/
 }
 
 .side-panel > section:nth-child(n + 2) {
@@ -295,8 +313,7 @@ header {
     background-size: cover;
 }
 
-.last-post-card-title-menu__link
-{
+.last-post-card-title-menu__link {
     color: #000000;
     font-size: 14px;
     font-weight: bold;
@@ -412,7 +429,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 245px;
+    margin: 0 auto;
 }
 
 .shop-card {
@@ -455,6 +472,7 @@ input {
 .shop-card__context {
     padding: 0 25px;
 }
+
 .shop-card__context > span, .shop-card__link {
     font-size: 15px;
     line-height: 22px;
@@ -517,10 +535,10 @@ input {
 }
 
 #social {
-    display: block;
     background-color: #f4f7f6;
     height: 83px;
-    margin-top: 64px;
+    width: 100%;
+    margin: 64px auto 0;
 }
 
 .social-icons {

@@ -24,12 +24,17 @@ body, html {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1, h2, h3 {
+    margin: 0;
+}
+
 a[href] {
     text-decoration: none;
 }
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 .href-underline:hover {
@@ -61,7 +66,7 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/banner-bg.jpg');
     height: 450px;
     width: 100%;
-    max-width: 1660px;
+    /*max-width: 1660px;*/
     margin: 0 auto;
 }
 
@@ -112,8 +117,11 @@ header {
     padding-top: 63px;
 }
 
-.section-title__image {
+.section-title__label::after {
+    content: "";
     display: block;
+    width: 67px;
+    border-bottom: 3px solid #e1d9bd;
     margin: 14px auto 28px;
 }
 
@@ -287,8 +295,11 @@ header {
     margin: 0;
 }
 
-.side-image {
+.side-title::after {
+    content: "";
     display: block;
+    width: 67px;
+    border-bottom: 3px solid #e1d9bd;
     margin: 14px auto 24px;
 }
 
@@ -416,6 +427,7 @@ input {
     font-size: 12px;
     font-weight: bold;
     color: #b59f5b;
+    vertical-align: super;
 }
 
 .side-topic-image {
@@ -435,8 +447,9 @@ input {
 .shop-card {
     position: relative;
     width: 348px;
-    height: 438px;
+    /*height: 438px;*/
     color: #0f0d0e;
+    padding-bottom: 26px;
 }
 
 .shop-card::before {
@@ -597,4 +610,8 @@ input {
     text-align: center;
     padding-top: 72px;
     padding-bottom: 40px;
+}
+
+#copyrights > a {
+    color: inherit;
 }

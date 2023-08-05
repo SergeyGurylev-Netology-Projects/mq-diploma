@@ -12,9 +12,7 @@
     <header>
         <div>
             <div class="top-panel container">
-                <a href="#">
-                <img src="svg/noemi-logo.svg" class="noemi-logo" alt="noemi logo">
-                </a>
+                <div id="button-menu"></div>
                 <nav class="top-menu">
                     <ul class="menu__list">
                         <li>
@@ -37,6 +35,9 @@
                         </li>
                     </ul>
                 </nav>
+                <a href="#">
+                    <img src="svg/noemi-logo.svg" class="noemi-logo" alt="noemi logo">
+                </a>
             </div>
             <div>
                 <h1 class="top-label">Блог о творчестве, спорте,<br>и образе жизни</h1>
@@ -438,7 +439,12 @@
                 </div>
                 <div class="shop-cards">
                     <article class="shop-card">
-                        <img src="images/shop-item-desk1.jpg" class="shop-card__image" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/shop-item-mobile1.jpg">
+                            <source media="(min-width: 641px) and (max-width: 1200px)" srcset="images/shop-item-tablet1.jpg">
+                            <source media="(min-width: 1201px)" srcset="images/shop-item-desk1.jpg">
+                            <img src="images/shop-item-desk1.jpg" class="shop-card__image" alt="">
+                        </picture>
                         <h2>подушки на диван</h2>
                         <div class="shop-card__context">
                             <span>
@@ -462,7 +468,12 @@
                         </div>
                     </article>
                     <article class="shop-card">
-                        <img src="images/shop-item-desk2.jpg" class="shop-card__image" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/shop-item-mobile2.jpg">
+                            <source media="(min-width: 641px) and (max-width: 1200px)" srcset="images/shop-item-tablet2.jpg">
+                            <source media="(min-width: 1201px)" srcset="images/shop-item-desk2.jpg">
+                            <img src="images/shop-item-desk2.jpg" class="shop-card__image" alt="">
+                        </picture>
                         <h2>Кукла «Зайчик»</h2>
                         <div class="shop-card__context">
                             <span>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена</span>
@@ -484,7 +495,12 @@
                         </div>
                     </article>
                     <article class="shop-card">
-                        <img src="images/shop-item-desk3.jpg" class="shop-card__image" alt="">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="images/shop-item-mobile3.jpg">
+                            <source media="(min-width: 641px) and (max-width: 1200px)" srcset="images/shop-item-tablet3.jpg">
+                            <source media="(min-width: 1201px)" srcset="images/shop-item-desk3.jpg">
+                            <img src="images/shop-item-desk3.jpg" class="shop-card__image" alt="">
+                        </picture>
                         <h2>Шестиугольная рамка</h2>
                         <div class="shop-card__context">
                             <span>Необычная рамка для украшения дома из видео</span>
@@ -509,11 +525,16 @@
                 </div>
             </section>
             <section id="social">
-                <ul class="social-icons">
+                <ul class="social-icons social-icons-desktop">
                     <li><a class="social-icon-twitter" href="#"></a></li>
                     <li><a class="social-icon-pinterest" href="#"></a></li>
                     <li><a class="social-icon-facebook" href="#"></a></li>
                     <li><a class="social-icon-instagram" href="#"></a></li>
+                    <li><a class="social-icon-tumblr" href="#"></a></li>
+                </ul>
+                <ul class="social-icons social-icons-mobile">
+                    <li><a class="social-icon-dribble" href="#"></a></li>
+                    <li><a class="social-icon-pinterest" href="#"></a></li>
                     <li><a class="social-icon-tumblr" href="#"></a></li>
                 </ul>
             </section>

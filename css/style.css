@@ -63,23 +63,10 @@ input:focus {
 }
 
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/banner-bg.jpg');
-    height: 450px;
     width: 100%;
-    /*max-width: 1660px;*/
     margin: 0 auto;
-}
-
-.noemi-logo {
-    width: 179px;
-    height: 41px;
-}
-
-.top-panel {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 28px;
+    background-position: center;
+    background-size: cover;
 }
 
 .top-menu__link {
@@ -93,6 +80,17 @@ header {
     padding: 0;
 }
 
+#button-menu {
+    content: "";
+    border-bottom: 10px double white;
+    border-top: 3px solid white;
+    height: 4px;
+    width: 23px;
+    box-sizing: unset;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .top-menu > .menu__list > li:nth-child(n+2) {
     padding-left: 35px;
 }
@@ -100,21 +98,15 @@ header {
 .top-label {
     color: white;
     font-weight: bold;
-    font-size: 45px;
-    line-height: 75px;
     text-transform: uppercase;
-    /*padding-top: 127px;*/
-    margin-top: 127px;
     text-align: center;
 }
 
 .section-title__label {
     color: #0f0d0e;
     font-weight: bold;
-    font-size: 20px;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 63px;
 }
 
 .section-title__label::after {
@@ -135,31 +127,36 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: calc(25% - 2px);
-    /*height: calc((25% - 2px) * 0.77);*/
-    /*height: 319px;*/
-    min-height: 319px;
     background-color: black;
 }
 
 .trends-card__background {
     position: relative;
+    overflow: hidden;
 }
 
 .trends-card__image {
-    position: absolute;
+    /*position: absolute;*/
     z-index: 1;
     opacity: 0.4;
-    width: 100%;
-    height: 319px;
+    min-width: 100%;
+    /*height: 319px;*/
+    min-height: 100%;
+    object-fit: cover;
 }
 
 .trends-card__body{
-    position: relative;
+    /*position: relative;*/
+    position: absolute;
     border: #b59f5b 2px solid;
     text-align: left;
     margin: auto 15px 15px;
     z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*display: inline-block;*/
+    /*width: max-content;*/
 }
 
 .trends-card-menu > ul {
@@ -178,48 +175,18 @@ header {
 
 .trends-card-title-menu__link {
     color: white;
-    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.trends-card-title {
-    padding: 15px 32px 35px;
-    line-height: 24px;
+    /*line-height: 18px;*/
 }
 
 .container {
-    /*text-align: center;*/
-    max-width: 1170px;
     margin: 0 auto;
     display: flex;
 }
 
-.content {
-    margin-right: 50px;
-}
-
-.content-container {
-    margin-top: 63px;
-}
-
 .footer-container {
     flex-direction: column;
-}
-
-.content-card {
-    display: flex;
-}
-
-.content-card:nth-child(n+2) {
-    margin-top: 59px;
-}
-
-.content-card__image {
-    width: 380px;
-    min-width: 380px;
-    height: 297px;
-    margin-right: 30px;
 }
 
 .content-card__image > img {
@@ -242,14 +209,8 @@ header {
 
 .content-card-title-menu__link {
     color: #0f0d0e;
-    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.content-card-title {
-    padding: 15px 0 37px;
-    line-height: 24px;
 }
 
 .content-card-date > time {
@@ -265,25 +226,10 @@ header {
 
 .content-card-article {
     color: #0f0d0e;
-    font-size: 15px;
-    line-height: 22px;
-    padding-top: 58px;
 }
 
 .content-card-article:nth-child(2n + 1) {
-    padding-top: 20px;
-}
-
-.side-panel {
-    /*float: right;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    width: 270px;
-    /*padding: 0;*/
-}
-
-.side-panel > section:nth-child(n + 2) {
-    margin-top: 60px;
+    padding-top: 0;
 }
 
 .side-title {
@@ -343,7 +289,7 @@ header {
 
 form {
     position: relative;
-    width: 270px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -446,10 +392,9 @@ input {
 
 .shop-card {
     position: relative;
-    width: 348px;
-    /*height: 438px;*/
     color: #0f0d0e;
     padding-bottom: 26px;
+    margin-bottom: 26px;
 }
 
 .shop-card::before {
@@ -458,7 +403,7 @@ input {
     border: #b59f5b 2px solid;
     left: 0;
     right: 0;
-    top: 172px;
+    /*top: 172px;*/
     bottom: 0;
     z-index: -1;
 }
@@ -466,7 +411,7 @@ input {
 .shop-card__image {
     display: block;
     position: relative;
-    height: 204px;
+    /*height: 224px;*/
     margin: 0 24px;
     object-fit: cover;
     background-color: #eff6f1;
@@ -551,7 +496,6 @@ input {
     background-color: #f4f7f6;
     height: 83px;
     width: 100%;
-    margin: 64px auto 0;
 }
 
 .social-icons {
@@ -559,7 +503,7 @@ input {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 210px;
+    /*width: 210px;*/
     padding: 0;
     margin: auto;
 }
@@ -581,6 +525,10 @@ input {
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
+}
+
+.social-icons .social-icon-dribble::before {
+    background-image: url("../svg/001-dribbble.svg");
 }
 
 .social-icons .social-icon-twitter::before {
@@ -608,10 +556,459 @@ input {
     font-weight: bold;
     color: #999999;
     text-align: center;
-    padding-top: 72px;
     padding-bottom: 40px;
 }
 
 #copyrights > a {
     color: inherit;
+}
+
+@media (min-width: 1201px) {
+    header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/banner-bg.jpg');
+        height: 450px;
+    }
+
+    .noemi-logo {
+        width: 179px;
+        height: 41px;
+    }
+
+    .top-panel {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 28px;
+    }
+
+    .container {
+        max-width: 1170px;
+    }
+
+    #button-menu {
+        display: none;
+    }
+
+    .top-label {
+        font-size: 45px;
+        line-height: 75px;
+        margin-top: 127px;
+    }
+
+    .section-title__label {
+        font-size: 20px;
+        padding-top: 63px;
+    }
+
+    .section-title__label::after {
+        margin: 14px auto 28px;
+    }
+
+    .trends-card {
+        width: calc(25% - 2px);
+        min-height: 319px;
+    }
+
+    .trends-card-title-menu__link {
+        font-size: 20px;
+    }
+
+    .trends-card-title {
+        line-height: 24px;
+        padding: 15px 32px 35px;
+    }
+
+    .content-container {
+        margin-top: 63px;
+    }
+
+    .content {
+        margin-right: 50px;
+    }
+
+    .content-card {
+        display: flex;
+    }
+
+    .content-card:nth-child(n+2) {
+        margin-top: 59px;
+    }
+
+    .content-card__image {
+        width: 380px;
+        min-width: 380px;
+        height: 297px;
+        margin-right: 30px;
+    }
+
+    .content-card-title-menu__link {
+        font-size: 20px;
+    }
+
+    .content-card-title {
+        padding: 15px 0 37px;
+        line-height: 24px;
+    }
+
+    .content-card-article {
+        font-size: 15px;
+        line-height: 22px;
+        padding-top: 58px;
+    }
+
+    .side-panel {
+        width: 270px;
+    }
+
+    .side-panel > section:nth-child(n + 2) {
+        margin-top: 60px;
+    }
+
+    .shop-card {
+        max-width: 348px;
+    }
+
+    .shop-card::before {
+        top: 172px;
+    }
+
+    .shop-card__image {
+        min-height: 224px;
+        width: 300px;
+    }
+
+    #social {
+        margin: 64px auto 0;
+    }
+
+    .social-icons {
+        width: 210px;
+    }
+
+    .social-icons-mobile {
+        display: none;
+    }
+
+    #copyrights {
+        padding-top: 72px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+    header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/banner-bg-tablet.jpg');
+        height: 390px;
+    }
+
+    .noemi-logo {
+        width: 158px;
+        height: 36px;
+    }
+
+    .top-panel {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 42px;
+    }
+
+    .container {
+        max-width: 698px;
+    }
+
+    .top-menu {
+        display: none;
+    }
+
+    #button-menu {
+        display: inline-block;
+    }
+
+    .top-label {
+        font-size: 40px;
+        line-height: 55px;
+        margin-top: 104px;
+    }
+
+    .section-title__label {
+        font-size: 18px;
+        padding-top: 50px;
+    }
+
+    .section-title__label::after {
+        margin: 14px auto 18px;
+    }
+
+    .trends-card {
+        min-height: 247px;
+    }
+
+    @media (orientation: landscape) {
+        .trends-card {
+            width: calc(25% - 2px);
+        }
+    }
+
+    @media (orientation: portrait) {
+        .trends-card {
+            width: calc(50% - 1px);
+        }
+    }
+
+    .trends-card:nth-child(n+2) {
+        margin-top: 2px;
+    }
+
+    .trends-card-title-menu__link {
+        font-size: 17px;
+    }
+
+    .trends-card-title {
+        line-height: 22px;
+        padding: 15px 32px 35px;
+    }
+
+    .content-container {
+        margin-top: 50px;
+    }
+
+    .content {
+        margin-right: 35px;
+    }
+
+    .content-card {
+        display: block;
+    }
+
+    .content-card::after {
+        content: "";
+        display: block;
+        border-bottom: 2px solid #eeeeee;
+        margin: 24px auto 0;
+    }
+
+    .content-card:nth-child(n+2) {
+        margin-top: 34px;
+    }
+
+    .content-card__image {
+        /*width: 392px;*/
+        min-width: 392px;
+        height: 301px;
+        /*margin-right: 30px;*/
+        margin-bottom: 16px;
+    }
+
+    .content-card-title-menu__link {
+        font-size: 17px;
+    }
+
+    .content-card-title {
+        padding: 15px 0 37px;
+        line-height: 22px;
+    }
+
+    .content-card-article {
+        font-size: 15px;
+        line-height: 22px;
+        padding-top: 35px;
+    }
+
+    .side-panel {
+        width: 270px;
+    }
+
+    .side-panel > section:nth-child(n + 2) {
+        margin-top: 60px;
+    }
+
+    .shop-card {
+        max-width: 339px;
+    }
+
+    .shop-card::before {
+        top: 195px;
+    }
+
+    .shop-card__image {
+        min-height: 224px;
+        width: 291px;
+    }
+
+    #social {
+        margin: 50px auto 0;
+    }
+
+    .social-icons {
+        width: 110px;
+    }
+
+    .social-icons-desktop {
+        display: none;
+    }
+
+    #copyrights {
+        padding-top: 49px;
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../images/banner-mobile.jpg');
+        height: 640px;
+    }
+
+    .noemi-logo {
+        display: block;
+        width: 269px;
+        height: 59px;
+        padding-top: 225px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .top-panel {
+        display: block;
+        padding-top: 32px;
+    }
+
+    .container {
+        max-width: 330px;
+    }
+
+    .top-menu {
+        display: none;
+    }
+
+    #button-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .top-label {
+        font-size: 26px;
+        line-height: 36px;
+        margin-top: 45px;
+    }
+
+    .section-title__label {
+        font-size: 16px;
+        padding-top: 44px;
+    }
+
+    .section-title__label::after {
+        margin: 12px auto 24px;
+    }
+
+    .trends-card {
+        /*width: 100%;*/
+        min-height: 233px;
+    }
+
+    .trends-card-menu > ul {
+        padding: 38px 0 0 20px;
+    }
+
+    @media (orientation: landscape) {
+        .trends-card {
+            width: calc(50% - 1px);
+        }
+    }
+
+    @media (orientation: portrait) {
+        .trends-card {
+            width: 100%;
+        }
+    }
+
+    .trends-card:nth-child(n+2) {
+        margin-top: 2px;
+    }
+
+    .trends-card-title-menu__link {
+        font-size: 16px;
+    }
+
+    .trends-card-title {
+        line-height: 20px;
+        padding: 15px 20px 30px;
+    }
+
+    .content-container {
+        margin-top: 44px;
+        flex-direction: column;
+    }
+
+    .content-card {
+        display: block;
+    }
+
+    .content-card::after {
+        content: "";
+        display: block;
+        border-bottom: 2px solid #eeeeee;
+        margin: 24px auto 0;
+    }
+
+    .content-card:nth-child(n+2) {
+        margin-top: 34px;
+    }
+
+    .content-card__image {
+        width: 380px;
+        min-width: 380px;
+        height: 297px;
+        /*margin-right: 30px;*/
+        margin-bottom: 16px;
+    }
+
+    .content-card-title-menu__link {
+        font-size: 16px;
+    }
+
+    .content-card-title {
+        padding: 15px 0 24px;
+        line-height: 20px;
+    }
+
+    .content-card-article {
+        font-size: 14px;
+        line-height: 20px;
+        padding-top: 22px;
+    }
+
+    .side-panel > section:nth-child(n) {
+        margin-top: 44px;
+    }
+
+    .side-title {
+        font-size: 16px;
+    }
+
+    .shop-card::before {
+        top: 253px;
+    }
+
+    .shop-card__image {
+        min-height: 285px;
+        width: 283px;
+    }
+
+    #social {
+        margin: 43px auto 0;
+    }
+
+    .social-icons {
+        width: 110px;
+    }
+
+    .social-icons-desktop {
+        display: none;
+    }
+
+    #copyrights {
+        padding-top: 49px;
+    }
 }

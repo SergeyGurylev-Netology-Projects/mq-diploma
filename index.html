@@ -350,7 +350,7 @@
                 <section id="search">
                     <form action="#">
                         <label>
-                            <input placeholder="Найти..." type="search">
+                            <input class="search-input" placeholder="Найти..." type="search">
                         </label>
                         <button class="search-btn" type="submit"></button>
                     </form>
@@ -361,9 +361,9 @@
                     </div>
                     <form action="#">
                         <label>
-                            <input placeholder="Ваш email-адрес" type="email">
+                            <input class="subscribe-input" placeholder="Ваш email-адрес" type="email">
                         </label>
-                        <button class="subscribe-btn" type="submit"></button>
+                        <button class="subscribe-btn" type="submit">Подписаться</button>
                     </form>
                 </section>
                 <section id="tags">
@@ -543,5 +543,37 @@
             </section>
         </div>
     </footer>
+    <div id="popup" class="">
+        <div id="popup-window">
+            <h2 class="section-title__label popup-title__label">Ваш фидбек</h2>
+            <form action="#">
+                <p class="popup-label">Как часто вы заходите на сайт?</p>
+                <label>
+                    <select class="popup-select">
+                        <option value="select-value__1" selected>Почти каждый день</option>
+                        <option value="select-value__2">Раз в несколько дней</option>
+                        <option value="select-value__3">Раз в несколько недель</option>
+                        <option value="select-value__4">Несколько раз в год</option>
+                    </select>
+                </label>
+                <p class="popup-label">Вы подписаны на e-mail рассылку?</p>
+                <label class="popup-radio-group">
+                    <div class="popup-radio-group__item">
+                        <input id="popup-radio-1" class="radio" type="radio" name="popup-radio-group__item" checked>
+                        <label for="popup-radio-1" class="popup-radio-group-text">Да</label>
+                    </div>
+                    <div class="popup-radio-group__item">
+                        <input id="popup-radio-2" class="radio" type="radio" name="popup-radio-group__item">
+                        <label for="popup-radio-2" class="popup-radio-group-text">Нет</label>
+                    </div>
+                </label>
+                <p class="popup-label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</p>
+                <label>
+                    <textarea class="popup-textarea" placeholder="Может, больше рецептов?"></textarea>
+                </label>
+                <button class="popup-btn" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
